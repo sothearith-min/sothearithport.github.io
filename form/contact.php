@@ -1,15 +1,26 @@
 <?php
-
-if (isset($_POST['submit'])) {
-  $to = "sothearithmin@gmail.com"; // Replace with your email address
-  $from = $_POST['email'];
-  $name = $_POST['name'];
-  $subject = "New form submission from $name";
-  $message = $name . " wrote the following:" . "\n\n" . $_POST['message'];
-  $headers = "From:" . $from;
-
-  mail($to,$subject,$message,$headers);
-  echo "Your message has been sent. Thank you!";
+if(isset($_POST['submit'])){
+    $to = "sothearithmin@gmail.com";
+    $subject = $_POST['subject'];
+    $message = $_POST['message'];
+    $header = "From: ".$_POST['email'];
+    
+    if(mail($to,$subject,$message,$header)){
+        echo "Email sent successfully";
+    }
+    else{
+        echo "Email not sent";
+    }
 }
-
 ?>
+
+<form method="post">
+    <input type="text" name="subject" placeholder="Subject">
+    <br><br>
+    <textarea name="message" placeholder="Message"></textarea>
+    <br><br>
+    <input type="email" name="email" placeholder="Your email">
+    <br><br>
+    <input type="submit" name="submit" value="Submit">
+</form>
+
