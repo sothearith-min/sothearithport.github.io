@@ -14,13 +14,4 @@ if(isset($_POST['submit'])){
 }
 ?>
 
-<form method="post">
-    <input type="text" name="subject" placeholder="Subject">
-    <br><br>
-    <textarea name="message" placeholder="Message"></textarea>
-    <br><br>
-    <input type="email" name="email" placeholder="Your email">
-    <br><br>
-    <input type="submit" name="submit" value="Submit">
-</form>
 
