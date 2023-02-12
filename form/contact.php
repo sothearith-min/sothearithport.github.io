@@ -1,7 +1,7 @@
 <?php
 
 if (isset($_POST['submit'])) {
-  $to = "you@example.com"; // Replace with your email address
+  $to = "sothearithmin@gmail.com"; // Replace with your email address
   $from = $_POST['email'];
   $name = $_POST['name'];
   $subject = "New form submission from $name";
